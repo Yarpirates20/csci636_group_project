@@ -87,7 +87,7 @@ SciPy==1.11.4
 service-identity==24.1.0
 setuptools==68.1.2
 six==1.16.0
-soupsieve==2.5
+soupsieve==4.0
 stack-data==0.6.3
 sympy==1.12
 systemd-python==235
