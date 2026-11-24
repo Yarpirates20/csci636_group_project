@@ -1,13 +1,6 @@
 """Run from the project root:
     python run_experiments.py           # DEV mode: fit on 2018-2024, evaluate on 2025 (never touches 2026)
     python run_experiments.py --final   # FINAL mode: fit on 2018-2025, evaluate on 2026 test. Run once.
-
-For each dataset (baseline, enhanced):
-  1. Choose LogReg / RF hyperparameters by walk-forward CV on train+validation (2018-2025)
-  2. Refit them on all of 2018-2025
-  3. Train the LSTM on 2018-2024 with 2025 for early stopping
-  4. Weighted ensemble (weights from validation-style AUC above 0.5)
-  5. Evaluate: classification + trading metrics; saves CSVs (results, daily returns, probabilities, SHAP importance)
 """
 import argparse
 import numpy as np
