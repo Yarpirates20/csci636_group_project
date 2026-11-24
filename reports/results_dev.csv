@@ -1,0 +1,10 @@
+dataset,model,acc,f1,auc,total_return,max_drawdown,months_beating_BH
+baseline,LogReg,0.467,0.495,0.502,-0.237,-0.335,0.417
+baseline,RandForest,0.514,0.545,0.522,-0.018,-0.254,0.5
+baseline,LSTM,0.5,0.584,0.512,-0.091,-0.324,0.5
+baseline,Ensemble,0.5,0.571,0.512,-0.004,-0.307,0.5
+enhanced,LogReg,0.5,0.331,0.513,-0.193,-0.286,0.5
+enhanced,RandForest,0.503,0.66,0.522,-0.029,-0.32,0.25
+enhanced,LSTM,0.505,0.032,0.538,-0.048,-0.053,0.417
+enhanced,Ensemble,0.5,0.571,0.52,-0.165,-0.316,0.417
+-,BuyHold,,,,-0.073,-0.32,
