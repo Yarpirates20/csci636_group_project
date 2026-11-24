@@ -5,7 +5,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 REPORTS = ROOT / "reports"
 
-SEED = 42          #reproducible seed
+SEED = 42          #reproducible seed --> can be changed with each run
 FEE = 0.001        #0.1% charged when position changes
 THRESHOLD = 0.5    #go long if P(up) > THRESHOLD, else hold cash
 WINDOW = 14        #LSTM look-back in days

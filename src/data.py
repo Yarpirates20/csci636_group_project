@@ -10,13 +10,13 @@ def load_split(kind: str, split: str) -> pd.DataFrame:
     return pd.read_csv(DATA / "processed" / kind / f"{split}.csv",
                        parse_dates=["date"], index_col="date")
 
-# Prepares the feature matrix X from a DataFrame
+#Prepares the feature matrix X from a DataFrame
 def make_X(df: pd.DataFrame) -> pd.DataFrame:
     X = df.drop(columns=["target"]).copy() 
     #Drop raw price levels because they are non-stationary; keep ratios and log-transformed features
     return X.drop(columns=[c for c in LEVEL_COLS if c in X]) 
 
-# Loads features (X) and target (y) for a given split
+#Loads features (X) and target (y) for a given split
 def load_xy(kind: str, split: str):
     df = load_split(kind, split) # Returns a DataFrame with date index, features, and target.
     return make_X(df), df["target"].astype(int) 
